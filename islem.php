@@ -13,7 +13,7 @@ $result = mysqli_query($conn, $sql);
 // Sonuçları kontrol etme
 if (mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
-    if ($row['lisans'] == '0') {
+    if ($row['lisans'] == '1') {
         // Giriş başarılı, oturum başlat ve adminotomobil.php sayfasına yönlendir
         session_start();
         $_SESSION['username'] = $username;
